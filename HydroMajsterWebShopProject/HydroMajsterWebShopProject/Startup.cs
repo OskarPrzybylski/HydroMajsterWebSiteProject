@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HydroMajsterWebShopProject.Models.Database;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 
 namespace HydroMajsterWebShopProject
 {
@@ -22,6 +24,9 @@ namespace HydroMajsterWebShopProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            var connectionString =
+                "User ID=xlolvddatltdxu;Password=adfa021f1d55164d3547d27a509fb6513f892fde7e8009bbd45301ad39e3f91c;Host=ec2-54-247-79-32.eu-west-1.compute.amazonaws.com;Port=5432;Database=d2aliisaq2mkp4;Pooling=true;Use SSL Stream=True;SSL Mode=Require;TrustServerCertificate=True;";
+            services.AddEntityFrameworkNpgsql().AddDbContext<DatabaseContext>(options => options.UseNpgsql(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

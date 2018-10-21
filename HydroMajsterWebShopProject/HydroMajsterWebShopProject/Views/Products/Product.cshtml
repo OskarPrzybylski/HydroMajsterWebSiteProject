@@ -1,9 +1,8 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model HydroMajsterWebShopProject.Views.ViewModels.CategoriesAndProductWithQuantityViewModel
+@{
+    ViewData["Title"] = "Product";
 }
-@model HydroMajsterWebShopProject.Views.ViewModels.CategoriesAndProductsViewModel
 
-<!-- Page Content -->
 <div class="container">
 
     <div class="row">
@@ -50,38 +49,11 @@
                 </a>
             </div>
 
-            <div class="row">
-                
-                @foreach (var item in Model.Products)
-                {
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <a asp-action="Product" asp-controller="Products" asp-route-productId="@item.Id"><img class="card-img-top" src="@item.PhotoUrl" alt=""></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    <a href="#">@item.Name</a>
-                                </h4>
-                                <h5>@item.Price</h5>
-                                <p class="card-text">@item.Description</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                            </div>
-                        </div>
-                    </div>
-                }
-                
-
-             
-             
-
-             
-               
-
-
-            </div>
-            <!-- /.row -->
-
+            
+            <h3>@Model.Product.Name</h3>
+            <h1>@Model.Product.Description</h1>
+            <h1>Cena: @Model.Product.Price</h1>
+        
         </div>
         <!-- /.col-lg-9 -->
 
