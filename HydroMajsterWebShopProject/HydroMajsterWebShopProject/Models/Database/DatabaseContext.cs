@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HydroMajsterWebShopProject.Models.Database
 {
-    public class DatabaseContext : IdentityDbContext
+    public class DatabaseContext : IdentityDbContext<ApplicationUser>
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
         public DbSet<Category> Categories { get; set; }

@@ -25,7 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\AdminPanel\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
