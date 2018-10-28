@@ -23,13 +23,13 @@ Webshop project realized for HydroMajster Company. The main goal of this website
  I am really thankful for making this template open-source under MIT-license!
  
  # To Do
- - [ ] Create solution structure
- - [ ] Design and create Company logo
+ - [x] Create solution structure
+ - [x] Design and create Company logo
  - [ ] Design additional photos for presentation layer
- - [ ] Create project Model Layer
- - [ ] Create repositories for providing CRUD operations( Repository and UnitOfWork patterns will be used )
- - [ ] Create Home and Product Controllers for manage Url requests
- - [ ] Add Administrator Controller for controlling content
- - [ ] Add views by using Razor Pages
+ - [x] Create project Model Layer
+ - [x] Create repositories for providing CRUD operations( Repository and UnitOfWork patterns will be used )
+ - [x] Create Home and Product Controllers for manage Url requests
+ - [x] Add Administrator Controller for controlling content
+ - [x] Add views by using Razor Pages
  - [ ] Design presentation layer
  
