@@ -8,6 +8,7 @@ namespace HydroMajsterWebShopProject.Models
     public class Category : DbModel
     {
         #region Properties
+        public string PhotoUrl { get; set; }
         public string Name { get; set; }
         #endregion
     }

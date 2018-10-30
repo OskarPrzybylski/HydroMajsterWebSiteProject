@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Product>
+
+@foreach (var product in Model)
+{
+    <h1>@product.Name</h1>
+    <form method="post" enctype="multipart/form-data" asp-controller="AdminPanel" asp-action="DeleteProduct">
+        <div class="form-group">
+            <div class="col-md-10">
+                <input name="categoryId" type="hidden" value="@product.Id" />
+                <input type="submit" value="usun produkt" />
+            </div>
+        </div>
+    </form>
+}

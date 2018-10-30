@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Category>
+
+
+
+<h1>@ViewData["Info"]</h1>
+
+@foreach (var category in Model)
+{
+    <h1>@category.Name</h1>
+    <form method="post" enctype="multipart/form-data" asp-controller="AdminPanel" asp-action="DeleteCategory">
+        <div class="form-group">
+            <div class="col-md-10">
+                <input name="categoryId" type="hidden" value="@category.Id" />
+                <input type="submit" value="usun kategorie"  />
+            </div>
+            </div>
+    </form>
+
+}
+
+
+
