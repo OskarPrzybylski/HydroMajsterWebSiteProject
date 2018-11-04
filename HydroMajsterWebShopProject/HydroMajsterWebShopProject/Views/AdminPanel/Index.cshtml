@@ -3,11 +3,27 @@
     ViewData["Title"] = "Index";
 }
 <h1>@TempData["Info"]</h1>
-<h2>Index witam serdecznie w paneliku</h2>
-<form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
-    <button type="submit" class="btn btn-link navbar-btn navbar-link">Log out</button>
-</form>
-<a asp-action="AddProduct" asp-controller="AdminPanel" class="list-group-item">dodaj produkt</a>
-<a asp-action="AddCategory" asp-controller="AdminPanel" class="list-group-item">dodaj kategorie</a>
-<a asp-action="DeleteCategory" asp-controller="AdminPanel" class="list-group-item">usun kategorie</a>
-<a asp-action="DeleteProduct" asp-controller="AdminPanel" class="list-group-item">usun produkt</a>
+
+
+<div class="row justify-content-center" style="padding-top:150px;">
+    <div class="col-lg-4 my-3" style="background-color: #58595B; margin:100px; text-align:center; font-size:22px;">
+
+        <img src="~/images/name2.png" alt="logo" style="padding-top: 15px; padding-bottom: 15px; width: 80%;">
+
+        <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="list-group-item my-3 rounded-0" style="background-color:#3A3C40; font-size:22px;">
+            <button type="submit" class="btn btn-link navbar-btn navbar-link" style="font-size:30px;">Log out</button>
+        </form>
+
+    </div>
+</div>
+
+
+<div class="row justify-content-center" style="padding-bottom:150px;">
+    <div class="col-lg-4 my-3" style="background-color: #58595B; margin:100px; text-align:center; font-size:22px;">
+        <a asp-action="AddProduct" asp-controller="AdminPanel" class="list-group-item my-3 rounded-0" style="background-color:#3A3C40">dodaj produkt</a>
+        <a asp-action="AddCategory" asp-controller="AdminPanel" class="list-group-item my-3 rounded-0" style="background-color:#3A3C40">dodaj kategorie</a>
+        <a asp-action="DeleteCategory" asp-controller="AdminPanel" class="list-group-item my-3 rounded-0" style="background-color:#3A3C40">usun kategorie</a>
+        <a asp-action="DeleteProduct" asp-controller="AdminPanel" class="list-group-item my-3 rounded-0" style="background-color:#3A3C40">usun produkt</a>
+
+    </div>
+</div>
