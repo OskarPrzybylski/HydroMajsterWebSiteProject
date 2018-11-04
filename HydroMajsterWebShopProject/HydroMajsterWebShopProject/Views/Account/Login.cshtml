@@ -7,15 +7,17 @@
 @inject SignInManager<ApplicationUser> SignInManager
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "Panel logowania";
 }
 
-<h2>@ViewData["Title"]</h2>
-<div class="row">
-    <div class="col-md-4">
+<h2 style="text-align: center; background-color: #58595B; color: white; padding-top: 2%; padding-bottom: 2%; margin-left: 5%; margin-right: 5%;">@ViewData["Title"]</h2>
+<br />
+<br />
+<div class="row" style="background-color: #58595B;padding-top: 5%; margin-left: 5%; margin-right: 5%;">
+    <div class="col-md-4" style="margin-left: 5%; margin-right: 5%; color: white;">
         <section>
             <form asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
-                <h4>Use a local account to log in.</h4>
+                <h4>Użyj swojego lokalnego konta aby się zalogować.</h4>
                 <hr />
                 <div asp-validation-summary="All" class="text-danger"></div>
                 <div class="form-group">
@@ -37,13 +39,18 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-default">Log in</button>
+                    <button type="submit" class="btn btn-default">Zaloguj</button>
                 </div>
             </form>
         </section>
     </div>
-   
-</div>
+    <div class="col-md-4" style="margin-left: 5%; margin-right: 5%; text-align: justify; color: white;">
+        <h3>Witaj w panelu logowania. Zalogować możesz się poprzez wpisanie danych podanych przy rejestracji. W razie problemów z logowaniem prosimy o kontakt na adres:</h3>
+        <h3 style="color: white;"> biuro@hydromajster.com.pl</h3>
+        </div>
+    </div>
+<br />
+<br />
 
 @section Scripts {
     @await Html.PartialAsync("_ValidationScriptsPartial")
