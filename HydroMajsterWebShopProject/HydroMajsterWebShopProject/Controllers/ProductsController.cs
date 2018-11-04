@@ -25,7 +25,17 @@ namespace HydroMajsterWebShopProject.Controllers
             {
                 var products = unitOfWork.ProductRepository.GetProductsByCategory(categoryId);
                 var categories = unitOfWork.CategoryRepository.GetAll();
-                return View(new CategoriesAndProductsViewModel{ Categories = categories, Products = products});
+                foreach (var product in products)
+                {
+                    if (product.Description != null)
+                    {
+                        if (product.Description.Length > 50)
+                        {
+                            product.Description = product.Description.Substring(0, 50) + "...";
+                        }
+                    }
+                }
+                return View(new CategoriesProductsCurrentCategoryViewModel { Categories = categories, Products = products, Category = unitOfWork.CategoryRepository.Get(categoryId)});
             }
 
             

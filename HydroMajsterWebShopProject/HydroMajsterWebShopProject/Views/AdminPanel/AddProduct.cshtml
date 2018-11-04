@@ -2,7 +2,7 @@
 @inject HydroMajsterWebShopProject.Models.Services.CategoriesIntoSelectListService service
 
 <div style="margin-left: auto; margin-right: auto; display: block; width: 60%;">
-    <h2 style="margin-left: auto; margin-right: auto; display: block; width:">Panel dodawania produktu</h2>
+    <h2 style="margin-left: auto; margin-right: auto; display: block;">Panel dodawania produktu</h2>
     <h3 style="text-align: justify">
         Tutaj możesz dodać produkt, który pojawi się na stronie głównej pod konkretną kategorią.
         Pamiętaj o wybraniu kategorii z listy rozwijalnej oraz dodaniu zdjęcia, które będzie reprezentowało produkt.
@@ -10,7 +10,7 @@
     <form method="post" enctype="multipart/form-data" asp-controller="AdminPanel" asp-action="AddProduct">
         <div class="form-group">
             <p style="font-size: 20px;">Zdjęcie produktu:</p>
-            <input type="file" name="file" />
+            <input type="file" name="file" required/>
         </div>
         <div class="form-group">
             <p style="font-size: 20px;">Nazwa produktu:</p>
