@@ -1,21 +1,25 @@
 ﻿@model HydroMajsterWebShopProject.Views.ViewModels.CategoryViewModel
 
-<h2>AddCategory</h2>
+<div style="margin-left: auto; margin-right: auto; display: block; width: 60%;">
+<h2 style="margin-left: auto; margin-right: auto; display: block; width:">Panel dodawania kategorii</h2>
+<h3 style="text-align: justify">Tutaj możesz dodać kategorię, która będzie się wyświetlać użytkownikom w lewej części strony. Po dodaniu kategorii
+    jest możliwe także dodawanie produktów do niej należących. Aby dodać kategorię wybierz jej nazwę a także dodaj zdjęcie
+    ją reprezentujące.</h3>
 <form method="post" enctype="multipart/form-data" asp-controller="AdminPanel" asp-action="AddCategory">
     <div class="form-group">
-        <div class="col-md-10">
-            <p>Zdjęcie produktu:</p>
+        
+            <p style="font-size: 20px;">Zdjęcie kategorii:</p>
             <input type="file" name="file" />
-        </div>
+       
     </div>
     <div class="form-group">
-        <label asp-for="Name"></label>
+        <p style="font-size: 20px;">Nazwa kategorii:</p>
         <input asp-for="Name" />
     </div>
     <div class="form-group">
-        <div class="col-md-10">
-            <input type="submit" value="Dodaj kategorie" />
+        <div class="col-md-10" style="margin-left: auto; margin-right: auto; display: block; width: 60%;">
+            <input type="submit" value="Dodaj kategorie" style="margin-left: auto; margin-right: auto; display: block; width: 60%;" />
         </div>
     </div>
 </form>
-
+    </div>

@@ -16,6 +16,6 @@ namespace HydroMajsterWebShopProject.Views.ViewModels
         [Required]
         public string Price { get; set; }
         [Required]
-        public int CategoryId { get; set; }
+        public string CategoryId { get; set; }
     }
 }

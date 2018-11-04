@@ -77,13 +77,14 @@ namespace HydroMajsterWebShopProject.Controllers
             {
                 var prod = new Product
                 {
-                    CategoryId = product.CategoryId, Description = product.Description, Name = product.Name,
+                    CategoryId = Int32.Parse(product.CategoryId), Description = product.Description, Name = product.Name,
                     Price = product.Price, PhotoUrl = PathDB
                 };
                 unitOfWork.ProductRepository.Add(prod);
                 unitOfWork.Save();
             }
-            return View();
+            TempData["Info"] = "Produkt dodany prawidłowo!";
+            return RedirectToAction(nameof(AdminPanelController.Index), "AdminPanel");
         }
         [HttpGet]
         public IActionResult AddCategory()

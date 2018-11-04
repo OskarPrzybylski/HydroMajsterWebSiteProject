@@ -9,6 +9,7 @@ namespace HydroMajsterWebShopProject.Views.ViewModels
     public class CategoryViewModel
     {
         [Required]
+        [Display(Name = "Nazwa kategorii")]
         public string Name { get; set; }
     }
 }
