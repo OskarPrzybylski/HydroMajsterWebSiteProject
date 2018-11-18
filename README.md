@@ -25,11 +25,11 @@ Webshop project realized for HydroMajster Company. The main goal of this website
  # To Do
  - [x] Create solution structure
  - [x] Design and create Company logo
- - [ ] Design additional photos for presentation layer
+ - [x] Design additional photos for presentation layer
  - [x] Create project Model Layer
  - [x] Create repositories for providing CRUD operations( Repository and UnitOfWork patterns will be used )
  - [x] Create Home and Product Controllers for manage Url requests
  - [x] Add Administrator Controller for controlling content
  - [x] Add views by using Razor Pages
- - [ ] Design presentation layer
+ - [x] Design presentation layer
  
